@@ -41,31 +41,7 @@
 		<audio ><source src="" type="audio/mpeg"></audio>
 	
 </div>
-<script >
-var character =document.getElementById("character");
-var block =document.getElementById("block");
-function jump(){
-if(character.classList =="animate")
-	character.classList.add("animate");
 
-	
-	setTimeout(function(){
-	character.classList.remove("animate");
-},400);
-	}
-var checkdead=setInterval(
-function(){
-	var characterTop=parseInt(window.getComputedStyle(character).getPropertyValue("bottom"));
 
-    var blockleft=parseInt(window.getComputedStyle(block).getPropertyValue("right"));
-
-	if(blockleft<60 && blockleft>-60 && characterTop>=190){
-		block.style.animation="none" ;
-		block.style.display="none";
-		alert("you lose");
-	}
-},10);
-
-</script>
 </body>
 </html>
